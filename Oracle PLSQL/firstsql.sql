@@ -1,0 +1,20 @@
+create or replace PROCEDURE CREATE_JAVA_CONTROLLER 
+(
+  CLASSNAME IN VARCHAR2 
+, ROUTINES IN VARCHAR2 
+, ATRIBUTES IN VARCHAR2 
+, BUILD_IT OUT VARCHAR2 
+) AS 
+V_CLASSNAME VARCHAR2(200);
+V_ROUTINES VARCHAR2(200);
+V_ATRIBUTES VARCHAR2(200);
+V_BUILD_IT VARCHAR2(200);
+BEGIN
+  V_CLASSNAME := 'public class' || CLASSNAME || '{' ;
+  
+ -- select regexp_substr('SMITH,ALLEN,WARD,JONES','[^,]+', 1, level) from dual
+  --connect by regexp_substr('SMITH,ALLEN,WARD,JONES', '[^,]+', 1, level) is not null;
+
+
+  
+END CREATE_JAVA_CONTROLLER;
